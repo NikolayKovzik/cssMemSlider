@@ -4,4 +4,29 @@
 body {
     font-family: 'Alegreya SC';
     font-size: 30px;
+    background-color: #dad7cd;
+}
+
+.header {
+    height: 10vh;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+}
+
+
+.slider__container {
+    width: 800px;
+    height: 100%;
+    background-color: #a3b18a;
+}
+
+
+
+.footer {
+    height: 10vh;
 }

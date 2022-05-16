@@ -2,31 +2,84 @@
 
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Alegreya SC';
-    font-size: 30px;
+    font-size: 18px;
+    line-height: 18px;
     background-color: #dad7cd;
+    min-height: 100vh;
+}
+
+input {
+    display: none;
 }
 
 .header {
-    height: 10vh;
+    min-height: 60px;
 }
 
 .slider {
     display: flex;
     justify-content: center;
-    align-content: center;
-    height: 80vh;
+    min-height: 380px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-
 .slider__container {
-    width: 800px;
-    height: 100%;
+    width: 700px;
+    height: inherit;
+}
+
+.slider__wrapper {
+    height: 87%;
+    border-radius: 5px;
     background-color: #a3b18a;
 }
 
+.slider__bottom {  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 13%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.slider__captions {
+    max-width: 40%;
+    height: fit-content;
+}
+
+.slider__caption {
+    margin: 0;
+}
+
+.slider__controls {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__control {
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+}
+
+.slider__disk {
+    display: block;
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: rgb(0, 0, 0);
+    border: 0.2rem solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
 
 
 .footer {
-    height: 10vh;
+    min-height: 45px;
 }

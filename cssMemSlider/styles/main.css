@@ -1,12 +1,15 @@
 /* git commit -m "feat:  are added `LANG=en_EN date +'(%a, %b %d, %Y %r)'`" */
 
+html {
+    font-size: 20px;
+}
+
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: 'Alegreya SC';
-    font-size: 22px;
     background-color: #dad7cd;
     min-height: 100vh;
 }
@@ -194,7 +197,50 @@ input {
  #control5:checked~.slider__bottom .slider__captions .slider__caption5,
  #control6:checked~.slider__bottom .slider__captions .slider__caption6 {
     transform: scale(1);
-    font-size: 22px;
+    font-size: 1rem;
     transition: all 0.3s;
 }
 
+
+@media (max-width: 768px) {
+    .slider__container {
+        width: auto
+    }
+
+    .slider__wrapper {
+        height: auto
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    .slider__controls {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .slider {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .slider__bottom {
+        flex-direction: column-reverse;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .slider__controls {
+        width: 100%;
+    }
+
+    .slider__captions {
+        width: 100%;
+    }
+
+    .slider__caption {
+        text-align: center;
+    }
+}

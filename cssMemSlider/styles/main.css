@@ -7,13 +7,12 @@ body {
     justify-content: center;
     font-family: 'Alegreya SC';
     font-size: 22px;
-    line-height: 22px;
     background-color: #dad7cd;
     min-height: 100vh;
 }
 
 input {
-    visibility: hidden;
+    display: none;
 }
 
 .slider {
@@ -68,8 +67,20 @@ input {
 
 .slider__captions {
     max-width: 40%;
-    height: fit-content;
 }
+
+
+.slider__caption1,
+.slider__caption2,
+.slider__caption3,
+.slider__caption4,
+.slider__caption5,
+.slider__caption6 {
+  transform: scale(0.01);
+  font-size: 0;
+  transition: all 0.3s;
+}
+
 
 .slider__caption {
     margin: 0;
@@ -84,9 +95,11 @@ input {
 }
 
 .slider__control {
-    height: 1.5rem;
+    height: 2.5rem;
     width: 10%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .slider__disk {
@@ -128,7 +141,7 @@ input {
 
 
 
- /*labels colors changing*/
+ /*radiobuttons animation*/
 
  #control1:hover~.slider__bottom .slider__controls .slider__control .slider__disk1,
  #control2:hover~.slider__bottom .slider__controls .slider__control .slider__disk2,
@@ -171,4 +184,17 @@ input {
     background-color: #588157;
 }
 
+
+ /*text animation*/
+
+ #control1:checked~.slider__bottom .slider__captions .slider__caption1,
+ #control2:checked~.slider__bottom .slider__captions .slider__caption2,
+ #control3:checked~.slider__bottom .slider__captions .slider__caption3,
+ #control4:checked~.slider__bottom .slider__captions .slider__caption4,
+ #control5:checked~.slider__bottom .slider__captions .slider__caption5,
+ #control6:checked~.slider__bottom .slider__captions .slider__caption6 {
+    transform: scale(1);
+    font-size: 22px;
+    transition: all 0.3s;
+}
 

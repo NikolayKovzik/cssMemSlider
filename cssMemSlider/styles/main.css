@@ -1,7 +1,7 @@
 /* git commit -m "fix: сhange of memes `LANG=en_EN date +'(%a, %b %d, %Y %r)'`" */
 
 html {
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 
@@ -21,20 +21,19 @@ input {
 .slider {
     display: flex;
     justify-content: center;
-    height: 600px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .slider__container {
-    width: 630px;
-    height: inherit;
+    width: 65vw;
+    aspect-ratio: 1.05/1;
 }
 
 .slider__wrapper {
     height: 87%;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 1%;
     background-color: #a3b18a;
     overflow: hidden;
 }
@@ -53,7 +52,7 @@ input {
 
 .slider__image {
     display: block;
-    border-radius: 5px;
+    border-radius: 1%;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -64,8 +63,8 @@ input {
     align-items: center;
     justify-content: space-between;
     height: 13%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .slider__captions {
@@ -103,13 +102,14 @@ input {
     cursor: pointer;
     display: flex;
     align-items: center;
+    user-select: none;
 }
 
 .slider__disk {
     display: block;
     margin: 0 auto;
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 2vw;
+    width: 2vw;
     background-color: #344e41;
     border: 0.2rem solid #344e41;
     border-radius: 50%;
@@ -203,16 +203,13 @@ input {
 
 
 @media (max-width: 768px) {
-    .slider__container {
-        width: auto
-    }
 
-    .slider__wrapper {
+    /* .slider__wrapper {
         height: auto
-    }
+    } */
 
     html {
-        font-size: 16px;
+        font-size: 3.5vw;
     }
 
     .slider__controls {
@@ -223,21 +220,29 @@ input {
 
 @media (max-width: 500px) {
     .slider {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
 
     .slider__bottom {
         flex-direction: column-reverse;
-        padding-left: 10px;
-        padding-right: 10px;
+        justify-content: flex-start;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
     .slider__controls {
         width: 100%;
+        height: 50%;
+    }
+
+    .slider__disk {
+        height: 1vw;
+        width: 1vw;
     }
 
     .slider__captions {
         width: 100%;
+        height: 40%;
     }
 
     .slider__caption {

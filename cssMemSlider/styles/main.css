@@ -26,7 +26,7 @@ input {
 }
 
 .slider__container {
-    width: 65vw;
+    width: 45vw;
     aspect-ratio: 1.05/1;
 }
 
@@ -108,8 +108,8 @@ input {
 .slider__disk {
     display: block;
     margin: 0 auto;
-    height: 2vw;
-    width: 2vw;
+    height: 0.5rem;
+    width: 1rem;
     background-color: #344e41;
     border: 0.2rem solid #344e41;
     border-radius: 50%;
@@ -204,9 +204,9 @@ input {
 
 @media (max-width: 768px) {
 
-    /* .slider__wrapper {
-        height: auto
-    } */
+    .slider__container {
+        width: 65vw;
+    }
 
     html {
         font-size: 3.5vw;
@@ -219,6 +219,10 @@ input {
 
 
 @media (max-width: 500px) {
+    .slider__container {
+        width: 90vw;
+    }
+
     .slider {
         padding-left: 1vw;
         padding-right: 1vw;
